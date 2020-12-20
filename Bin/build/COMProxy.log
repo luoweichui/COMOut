@@ -1,0 +1,13 @@
+﻿生成启动时间为 2020/12/20 20:04:20。
+     1>项目“E:\code\COMOut\COMProxy\COMProxy.vcxproj”在节点 2 上(Build 个目标)。
+     1>Link:
+         D:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\code\COMOut\Bin\COMProxy.dll" /INCREMENTAL /NOLOGO rpcrt4.lib Rpcns4.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /DEF:"Source.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\code\COMOut\Bin\COMProxy.pdb" /SUBSYSTEM:WINDOWS,"5.01" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\code\COMOut\Bin\COMProxy.lib" /MACHINE:X86 /SAFESEH:NO /DLL E:\code\COMOut\Bin\build\COMProxy_i.obj
+         E:\code\COMOut\Bin\build\COMProxy_p.obj
+         E:\code\COMOut\Bin\build\dlldata.obj
+            正在创建库 E:\code\COMOut\Bin\COMProxy.lib 和对象 E:\code\COMOut\Bin\COMProxy.exp
+         COMProxy.vcxproj -> E:\code\COMOut\Bin\COMProxy.dll
+     1>已完成生成项目“E:\code\COMOut\COMProxy\COMProxy.vcxproj”(Build 个目标)的操作。
+
+生成成功。
+
+已用时间 00:00:01.09

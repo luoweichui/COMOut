@@ -1,0 +1,57 @@
+import "unknwn.idl";
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(8A26B267-20B6-48BE-A6A1-7E36B2074DD3),
+	helpstring("ICallBack 接口"),
+	pointer_default(unique)
+]
+interface ICallBack : IUnknown
+{
+	[helpstring("方法SendMsgToClinet")]
+	HRESULT SendMsgToClinet([in] long port) = 0;
+};
+
+[
+	object,
+	uuid(7799FC42-7048-4FDD-8035-DC1872A9F95E),
+	helpstring("IComInterface 接口"),
+	pointer_default(unique)
+]
+interface IComInterface : IUnknown
+{
+	[helpstring("方法Write")]
+	HRESULT  Write( [in] long size) = 0;
+
+	[helpstring("方法Read")]
+	HRESULT  Read([out] long* port) = 0;
+
+	[helpstring("方法SetCallBack")]
+	HRESULT  SetCallBack([in]ICallBack* pCallBack, [out]long* callBackID) = 0;
+
+	[helpstring("方法ReleaseCallBack")]
+	HRESULT  ReleaseCallBack([in]long callBackID) = 0;
+
+	[helpstring("方法Test")]
+	HRESULT  Test(void) = 0;
+};
+
+[
+	uuid(9BBD854F-970A-4ABD-917E-FF736C8C86CB),
+	version(1.0),
+	helpstring("IComInterfaceLib 1.0 类型库")
+]
+library IComInterfaceLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(6779B5C9-3F74-47CA-8800-5DC8A7F9FD55),
+		helpstring("IComInterfaceLib Class")
+	]
+	coclass CComInterface
+	{
+		[default] interface IComInterface;
+	};
+};
